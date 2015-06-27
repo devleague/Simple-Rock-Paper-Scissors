@@ -1,14 +1,17 @@
 //var userChoice = prompt("Do you choose rock, paper or scissors?");
 function userRock() {
     userChoice = "rock";
+    computerThinking();
     results();
 };
 function userPaper() {
     userChoice = "paper";
+    computerThinking();
     results();
 };
 function userScissors() {
     userChoice = "scissors";
+    computerThinking();
     results();
 };
 
@@ -18,15 +21,16 @@ function results() {
     compare(userChoice, computerChoice);
 };
 
-
-var computerChoice = Math.random();
-if (computerChoice < 0.34) {
-	computerChoice = "rock";
-} else if(computerChoice <= 0.67) {
-	computerChoice = "paper";
-} else {
-	computerChoice = "scissors";
-} 
+function computerThinking() {
+    var computerChoice = Math.random();
+    if (computerChoice < 0.34) {
+	   computerChoice = "rock";
+    } else if(computerChoice <= 0.67) {
+	   computerChoice = "paper";
+    } else {
+	   computerChoice = "scissors";
+    } 
+};
 
 
 var compare = function(choice1, choice2) {
