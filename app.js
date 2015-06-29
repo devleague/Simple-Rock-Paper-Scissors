@@ -1,69 +1,68 @@
-//var userChoice = prompt("Do you choose rock, paper or scissors?");
-function userRock() {
+function computerThink(){
+   computerChoice = Math.floor(Math.random()*3);
+  if(computerChoice === 1){
+    computerChoice = "rock";
+  }
+  else if(computerChoice === 2){
+    computerChoice = "paper";
+  }
+  else{
+    computerChoice = "scissors";
+  }
+};
+
+function rockPick(){
     userChoice = "rock";
-    computerThinking();
+    computerThink();
     results();
+    replay();
 };
-function userPaper() {
+function paperPick() {
     userChoice = "paper";
-    computerThinking();
+    computerThink();
     results();
+    replay();
 };
-function userScissors() {
+function scissorsPick() {
     userChoice = "scissors";
-    computerThinking();
+    computerThink();
     results();
+    replay();
 };
 
 function results() {
-    alert("You Choose: " + userChoice);
-    alert("Computer: " + computerChoice);
+    alert("You choose " + userChoice);
+    alert("Computer choose " + computerChoice);
     compare(userChoice, computerChoice);
 };
 
-function computerThinking() {
-    var computerChoice = Math.random();
-    if (computerChoice < 0.34) {
-	   computerChoice = "rock";
-    } else if(computerChoice <= 0.67) {
-	   computerChoice = "paper";
-    } else {
-	   computerChoice = "scissors";
-    } 
-};
-
-
-var compare = function(choice1, choice2) {
+function compare(choice1, choice2) {
     if (choice1 === choice2) {
     alert("The result is a tie!")
     }
     else if (choice1 === "rock") {
         if (choice2 === "scissors") {
-            
-            alert("You Win")
+            alert("You Win");
         }
         else {
-            alert("You Lose")
+            alert("You Lose");
             }
     }
     else if (choice1 === "paper") {
         if (choice2 === "rock") {
-            alert("You Win")
+            alert("You Win");
         }
         else {
-            alert("You Lose")
+            alert("You Lose");
         }
     }
     else if (choice1 === "scissors") {
         if (choice2 === "paper") {
-            alert("You Win")
+            alert("You Win");
         }
         else {
-            alert("You Lose")
+            alert("You Lose");
         }
-    }
-    else {
-        alert("That is not an appropriate answer")
     }
 };
 
