@@ -11,29 +11,29 @@ function computerThink(){
   else{
     computerChoice = "scissors";
   }
-};
+}
 
 function rockPick(){
     userChoice = "rock";
     computerThink();
     results();
-};
+}
 function paperPick() {
     userChoice = "paper";
     computerThink();
     results();
-};
+}
 function scissorsPick() {
     userChoice = "scissors";
     computerThink();
     results();
-};
+}
 
 function results() {
     alert("You choose " + userChoice);
     alert("Computer choose " + computerChoice);
     compare(userChoice, computerChoice);
-};
+}
 
 function compare(choice1, choice2) {
     if (choice1 === choice2) {
